@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원생성</title>
+        <link rel="stylesheet" href="../assets/css/signup.css">
+        <link rel="stylesheet" href="../assets/css/reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h2 class="ir_su">네비게이션바</h2>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                      <!-- 왼쪽 (공백) -->
+                      <li class="header__nav-spacer"></li>
+                  
+                      <!-- 가운데 (홈) -->
+                      <li class="header__nav-item header__nav-item--center">
+                        <a href="#" class="header__nav-link">
+                          <span class="ir_su">홈</span>
+                          <i class="fa-solid fa-house"></i>
+                        </a>
+                      </li>
+                  
+                      <!-- 오른쪽 (로그인 / 마이페이지) -->
+                      <li class="header__nav-item header__nav-item--right">
+                        <a href="#" class="header__nav-link">
+                          <span class="ir_su">로그인</span>
+                          <i class="fa-solid fa-right-to-bracket"></i>
+                        </a>
+                        <a href="#" class="header__nav-link">
+                          <span class="ir_su">마이페이지</span>
+                          <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  
+              </header>
+
+            <main class="main">   
+                <article class="signup">
+                    <h2 class="signup__title">회원생성</h2>
+                    <form class="signup__form" method="post">
+                        
+
+                        <label class="signup__label ir_su" for="user-id">아이디*</label><br>
+                        <div class="signup__input-wrapper">
+                            <i class="fa-solid  fa-user signup__input-icon"></i>
+                            <input class="signup__input" type="text" id="user-id" placeholder="아이디를 입력해주세요."  maxlength="20"/><br>
+                          </div>
+                        <label class="signup__label ir_su" for="user-pw">비밀번호*</label><br>
+                        <div class="signup__input-wrapper">
+                            <i class="fa-solid fa-lock signup__input-icon"></i>
+                        <input class="signup__input" type="password" id="user-pw" placeholder="비밀번호를 입력해주세요." maxlength="20"/> <br>
+                            </div>
+                        <label class="signup__label ir_su" for="user-name">이름*</label><br>
+                        <div class="signup__input-wrapper">
+                            <i class="fa-solid  fa-user signup__input-icon"></i>
+                        <input class="signup__input" type="text" id="user-name" placeholder="이름을 입력해주세요." maxlength="20"/> <br>
+                            </div>
+                        <label class="signup__label ir_su" for="company-name">회사명*</label><br>
+                        <div class="signup__input-wrapper">
+                            <i class="fa-solid fa-building signup__input-icon"></i>
+                        <input class="signup__input" type="text" id="company-name" placeholder="회사명을 입력해주세요." maxlength="20"/> <br>
+                            </div>
+                        <button class="signup__button" type="submit">로그인</button>
+                    </form>
+                </article>
+            </main>
+
+            <footer class="footer">
+                <p class="footer__copyright">
+                    Copyright© 2025 All rights reserved.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

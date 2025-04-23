@@ -1,0 +1,151 @@
+/* 전체 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0; /* 내부 여백 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 뷰포트 높이만큼 차지 */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 배경 블러처리 */
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/main-background-image-03.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+    z-index: -1;
+  }
+
+/* header start*/
+.header {height: 50px; background-color: #1A2036; color: #fff;}
+ .header .header__nav {
+  height: 50px;
+ } 
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  font-size: 21px;
+   
+}
+
+.header__nav-spacer {
+  flex: 1; /* 왼쪽 여백 */
+}
+
+.header__nav-item--center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__nav-item--right {
+  display: flex;
+  gap: 24px;
+  margin-right: 20px;
+}
+
+  
+/* header end */
+
+
+
+/* main start */
+  .main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .login {
+    width: 500px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .main .login .login__form .login__label {
+    color: #ececec;
+  }
+  .main .login .login__form .login__input {
+    width: 250px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .main .login .login__form .login__button {
+    width: 250px;
+    height: 50px;
+    border: #1A2036;
+    background-color: #1A2036;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .main .login .login__form .login__button:active {
+    border:solid 1px #fff;
+    background-color: rgba(255, 255, 255, 0);
+    
+  }
+
+  /* main end */
+
+
+/* footer start */
+  .footer{
+    height: 50px; background-color: #1A2036; color: #fff;
+  }
+
+  .footer .footer__copyright{
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* footer end */
+
+
+
+/* 미디어 쿼리 */
+
+    /* 태블릿 이하 */
+@media (max-width: 1024px) {
+    .container {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+  }
+  
+    /* 모바일 */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 12px;
+    }
+  }
